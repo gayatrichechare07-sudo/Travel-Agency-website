@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Destinations</title>
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background setup matching your previous page layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background-image: url('https://unsplash.com');
+            background-size: cover;       
+            background-position: center;  
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        /* Container designed to look seamless over your sunset image */
+        .tours {
+            background-color: rgba(26, 54, 93, 0.85); /* Matching semi-transparent dark blue */
+            color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+            margin-top: 40px;
+            margin-left: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .tours h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        /* Modernized transparent table styling */
+        .destinations-table {
+            width: 100%;
+            border-collapse: collapse; 
+            text-align: left;
+        }
+
+        /* Header design styling */
+        .destinations-table th {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: #e2e8f0;
+        }
+
+        /* Table data rows */
+        .destinations-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.05rem;
+            color: #ffffff;
+        }
+
+        /* Soft background row highlights for data legibility over background */
+        .destinations-table tbody tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Hover animation response effect */
+        .destinations-table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: background-color 0.2s ease;
+        }
+
+        .star {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Integrated destinations block element -->
+    <section class="tours">
+        <h2>Top Destinations</h2>
+
+        <table class="destinations-table">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Maldives</td><td><span class="star">⭐</span> 4.9</td></tr>
+                <tr><td>Switzerland</td><td><span class="star">⭐</span> 4.8</td></tr>
+                <tr><td>Dubai</td><td><span class="star">⭐</span> 4.7</td></tr>
+                <tr><td>Bali</td><td><span class="star">⭐</span> 4.8</td></tr>
+                <tr><td>Paris</td><td><span class="star">⭐</span> 4.9</td></tr>
+                <tr><td>Goa</td><td><span class="star">⭐</span> 4.6</td></tr>
+                <tr><td>Japan</td><td><span class="star">⭐</span> 4.9</td></tr>
+                <tr><td>USA</td><td><span class="star">⭐</span> 4.7</td></tr>
+                <tr><td>Australia</td><td><span class="star">⭐</span> 4.8</td></tr>
+                <tr><td>London</td><td><span class="star">⭐</span> 4.7</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>

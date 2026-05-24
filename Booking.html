@@ -1,0 +1,100 @@
+<!-- =========================
+UPDATED booking.html
+========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">TravelX</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- Booking Section -->
+
+<section class="booking-page">
+
+<h2>Book Your Dream Trip ✈️</h2>
+
+<p>Select destination and calculate your trip price instantly.</p>
+
+<div class="booking-container">
+
+<form id="bookingForm">
+
+<input type="text" placeholder="Enter Your Name" required>
+
+<input type="email" placeholder="Enter Your Email" required>
+
+<select id="destination">
+
+<option value="45000">Maldives - ₹45,000</option>
+
+<option value="60000">Dubai - ₹60,000</option>
+
+<option value="95000">Switzerland - ₹95,000</option>
+
+<option value="30000">Goa - ₹30,000</option>
+
+</select>
+
+<input type="number" id="people" placeholder="Number of Travelers" required>
+
+<button type="button" onclick="calculatePrice()">
+
+Calculate Price
+
+</button>
+
+<h3 id="totalPrice"></h3>
+
+<button type="submit">Book Now</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>© 2026 TravelX Agency</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
