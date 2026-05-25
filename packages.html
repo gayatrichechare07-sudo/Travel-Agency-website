@@ -1,53 +1,260 @@
-<!-- =========================
-HORIZONTAL DESTINATIONS TABLE
-ADD INSIDE destinations.html
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Destinations</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+
+    /* Beautiful Background Image */
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* Main Card */
+.tours{
+    width:100%;
+    max-width:650px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+    color:white;
+
+    animation:fadeIn 1s ease;
+}
+
+/* Heading */
+.tours h2{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:#ffffff;
+    letter-spacing:1px;
+}
+
+/* Table */
+.destinations-table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+}
+
+.destinations-table th{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    text-transform:uppercase;
+    font-size:0.9rem;
+    letter-spacing:1px;
+    color:#facc15;
+}
+
+.destinations-table td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    transition:0.3s;
+}
+
+/* Alternate rows */
+.destinations-table tbody tr:nth-child(even){
+    background:rgba(255,255,255,0.05);
+}
+
+/* Hover Effect */
+.destinations-table tbody tr:hover{
+    background:rgba(255,255,255,0.18);
+    transform:scale(1.02);
+}
+
+/* Rating Color */
+.star{
+    color:#ffd700;
+    margin-right:5px;
+}
+
+/* Button */
+.btn{
+    display:block;
+    margin:25px auto 0;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(37,99,235,0.5);
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .tours{
+        padding:20px;
+    }
+
+    .tours h2{
+        font-size:1.8rem;
+    }
+
+    .destinations-table th,
+    .destinations-table td{
+        padding:12px;
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
 
 <section class="tours">
 
-<h2>Top Destinations</h2>
+    <h2>🌍 Top Destinations</h2>
 
-<div class="table-box">
+    <table class="destinations-table">
 
-<table border="1">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
 
-<tr>
+        <tbody>
 
-<th>Country</th>
+            <tr>
+                <td>Maldives</td>
+                <td><span class="star">⭐</span>4.9</td>
+            </tr>
 
-<td>Maldives</td>
-<td>Switzerland</td>
-<td>Dubai</td>
-<td>Bali</td>
-<td>Paris</td>
-<td>Goa</td>
-<td>Japan</td>
-<td>USA</td>
-<td>Australia</td>
-<td>London</td>
+            <tr>
+                <td>Switzerland</td>
+                <td><span class="star">⭐</span>4.8</td>
+            </tr>
 
-</tr>
+            <tr>
+                <td>Dubai</td>
+                <td><span class="star">⭐</span>4.7</td>
+            </tr>
 
-<tr>
+            <tr>
+                <td>Bali</td>
+                <td><span class="star">⭐</span>4.8</td>
+            </tr>
 
-<th>Rating</th>
+            <tr>
+                <td>Paris</td>
+                <td><span class="star">⭐</span>4.9</td>
+            </tr>
 
-<td>⭐ 4.9</td>
-<td>⭐ 4.8</td>
-<td>⭐ 4.7</td>
-<td>⭐ 4.8</td>
-<td>⭐ 4.9</td>
-<td>⭐ 4.6</td>
-<td>⭐ 4.9</td>
-<td>⭐ 4.7</td>
-<td>⭐ 4.8</td>
-<td>⭐ 4.7</td>
+            <tr>
+                <td>Goa</td>
+                <td><span class="star">⭐</span>4.6</td>
+            </tr>
 
-</tr>
+            <tr>
+                <td>Japan</td>
+                <td><span class="star">⭐</span>4.9</td>
+            </tr>
 
-</table>
+            <tr>
+                <td>USA</td>
+                <td><span class="star">⭐</span>4.7</td>
+            </tr>
 
-</div>
+            <tr>
+                <td>Australia</td>
+                <td><span class="star">⭐</span>4.8</td>
+            </tr>
+
+            <tr>
+                <td>London</td>
+                <td><span class="star">⭐</span>4.7</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <button class="btn" onclick="showMessage()">
+        Explore Now ✈️
+    </button>
 
 </section>
 
+<script>
+
+/* Button Click Effect */
+function showMessage(){
+    alert("✨ Start Your Dream Journey Today!");
+}
+
+/* Row Animation */
+const rows = document.querySelectorAll("tbody tr");
+
+rows.forEach((row,index)=>{
+
+    row.style.opacity="0";
+    row.style.transform="translateX(-30px)";
+
+    setTimeout(()=>{
+
+        row.style.transition="0.5s ease";
+        row.style.opacity="1";
+        row.style.transform="translateX(0)";
+
+    }, index * 120);
+
+});
+
+</script>
+
+</body>
+</html>
