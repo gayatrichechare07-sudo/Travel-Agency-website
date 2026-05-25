@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Destinations</title>
+
+<title>Travel Packages | TravelX</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+GLOBAL STYLING
+========================= */
 
 *{
     margin:0;
@@ -20,107 +25,192 @@ body{
     font-family:'Poppins',sans-serif;
     min-height:100vh;
 
-    /* Beautiful Background Image */
+    /* Background Image */
     background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1974&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1974&auto=format&fit=crop');
 
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-/* Main Card */
-.tours{
-    width:100%;
-    max-width:650px;
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.2);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.4);
     color:white;
-
-    animation:fadeIn 1s ease;
+    padding:40px 20px;
 }
 
-/* Heading */
-.tours h2{
+/* =========================
+SECTION TITLE
+========================= */
+
+.package-section{
+    max-width:1300px;
+    margin:auto;
+}
+
+.package-section h1{
     text-align:center;
-    font-size:2.3rem;
-    margin-bottom:25px;
-    color:#ffffff;
-    letter-spacing:1px;
+    font-size:3rem;
+    margin-bottom:15px;
+    color:#38bdf8;
+    animation:fadeDown 1s ease;
 }
 
-/* Table */
-.destinations-table{
-    width:100%;
-    border-collapse:collapse;
+.package-text{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 60px;
+    font-size:18px;
+    color:#e2e8f0;
+    line-height:1.8;
+}
+
+/* =========================
+PACKAGE GRID
+========================= */
+
+.package-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+/* =========================
+PACKAGE CARD
+========================= */
+
+.package-card{
+    position:relative;
     overflow:hidden;
+    border-radius:25px;
+    min-height:480px;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:flex-end;
+
+    transition:0.5s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+    animation:fadeUp 1s ease;
 }
 
-.destinations-table th{
-    background:rgba(255,255,255,0.15);
-    padding:15px;
-    text-transform:uppercase;
-    font-size:0.9rem;
-    letter-spacing:1px;
+/* Overlay */
+
+.package-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.2));
+}
+
+/* Hover */
+
+.package-card:hover{
+    transform:translateY(-12px) scale(1.03);
+}
+
+/* Content */
+
+.package-content{
+    position:relative;
+    z-index:2;
+    padding:30px;
+    width:100%;
+}
+
+.package-content h2{
+    font-size:2rem;
+    margin-bottom:10px;
     color:#facc15;
 }
 
-.destinations-table td{
-    padding:15px;
-    border-bottom:1px solid rgba(255,255,255,0.15);
-    transition:0.3s;
+.package-content p{
+    font-size:15px;
+    line-height:1.8;
+    color:#f8fafc;
+    margin-bottom:20px;
 }
 
-/* Alternate rows */
-.destinations-table tbody tr:nth-child(even){
-    background:rgba(255,255,255,0.05);
+/* Price */
+
+.price{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+    margin-bottom:20px;
 }
 
-/* Hover Effect */
-.destinations-table tbody tr:hover{
-    background:rgba(255,255,255,0.18);
-    transform:scale(1.02);
+/* Features */
+
+.features{
+    margin-bottom:25px;
 }
 
-/* Rating Color */
-.star{
-    color:#ffd700;
-    margin-right:5px;
+.features li{
+    list-style:none;
+    margin-bottom:10px;
+    font-size:15px;
 }
 
 /* Button */
+
 .btn{
-    display:block;
-    margin:25px auto 0;
-    padding:12px 25px;
-    border:none;
+    display:inline-block;
+    padding:12px 28px;
     border-radius:30px;
-    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    text-decoration:none;
+    background:linear-gradient(135deg,#06b6d4,#2563eb);
     color:white;
-    font-size:16px;
     font-weight:600;
-    cursor:pointer;
     transition:0.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:scale(1.08);
     box-shadow:0 5px 15px rgba(37,99,235,0.5);
 }
 
-/* Animation */
-@keyframes fadeIn{
+/* =========================
+BACKGROUND IMAGES
+========================= */
+
+.family{
+    background-image:url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1974&auto=format&fit=crop');
+}
+
+.solo{
+    background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1974&auto=format&fit=crop');
+}
+
+.honeymoon{
+    background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1974&auto=format&fit=crop');
+}
+
+.adventure{
+    background-image:url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1974&auto=format&fit=crop');
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
     from{
         opacity:0;
         transform:translateY(40px);
@@ -131,21 +221,26 @@ body{
     }
 }
 
-/* Mobile Responsive */
+/* =========================
+RESPONSIVE
+========================= */
+
 @media(max-width:768px){
 
-    .tours{
-        padding:20px;
+    .package-section h1{
+        font-size:2.2rem;
     }
 
-    .tours h2{
-        font-size:1.8rem;
+    .package-text{
+        font-size:16px;
     }
 
-    .destinations-table th,
-    .destinations-table td{
-        padding:12px;
-        font-size:14px;
+    .package-card{
+        min-height:430px;
+    }
+
+    .package-content h2{
+        font-size:1.7rem;
     }
 }
 
@@ -154,103 +249,159 @@ body{
 
 <body>
 
-<section class="tours">
+<!-- =========================
+PACKAGE SECTION
+========================= -->
 
-    <h2>🌍 Top Destinations</h2>
+<section class="package-section">
 
-    <table class="destinations-table">
+<h1>🌍 Travel Packages</h1>
 
-        <thead>
-            <tr>
-                <th>Country</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
+<p class="package-text">
 
-        <tbody>
+Choose from our carefully designed travel packages made for families,
+solo travelers, couples, and adventure lovers.
+Experience unforgettable journeys with comfort, luxury, and excitement.
 
-            <tr>
-                <td>Maldives</td>
-                <td><span class="star">⭐</span>4.9</td>
-            </tr>
+</p>
 
-            <tr>
-                <td>Switzerland</td>
-                <td><span class="star">⭐</span>4.8</td>
-            </tr>
+<div class="package-container">
 
-            <tr>
-                <td>Dubai</td>
-                <td><span class="star">⭐</span>4.7</td>
-            </tr>
+<!-- FAMILY PACKAGE -->
 
-            <tr>
-                <td>Bali</td>
-                <td><span class="star">⭐</span>4.8</td>
-            </tr>
+<div class="package-card family">
 
-            <tr>
-                <td>Paris</td>
-                <td><span class="star">⭐</span>4.9</td>
-            </tr>
+<div class="package-content">
 
-            <tr>
-                <td>Goa</td>
-                <td><span class="star">⭐</span>4.6</td>
-            </tr>
+<h2>👨‍👩‍👧 Family Package</h2>
 
-            <tr>
-                <td>Japan</td>
-                <td><span class="star">⭐</span>4.9</td>
-            </tr>
+<p>
+Perfect for family vacations with comfortable stays,
+fun activities, and memorable sightseeing experiences.
+</p>
 
-            <tr>
-                <td>USA</td>
-                <td><span class="star">⭐</span>4.7</td>
-            </tr>
+<div class="price">₹65,000</div>
 
-            <tr>
-                <td>Australia</td>
-                <td><span class="star">⭐</span>4.8</td>
-            </tr>
+<ul class="features">
+<li>✔ 5 Days & 4 Nights</li>
+<li>✔ Luxury Hotel Stay</li>
+<li>✔ Free Breakfast & Dinner</li>
+<li>✔ Guided City Tours</li>
+<li>✔ Kids Friendly Activities</li>
+</ul>
 
-            <tr>
-                <td>London</td>
-                <td><span class="star">⭐</span>4.7</td>
-            </tr>
+<a href="#" class="btn">Book Now ✈️</a>
 
-        </tbody>
+</div>
 
-    </table>
+</div>
 
-    <button class="btn" onclick="showMessage()">
-        Explore Now ✈️
-    </button>
+<!-- SOLO PACKAGE -->
+
+<div class="package-card solo">
+
+<div class="package-content">
+
+<h2>🎒 Solo Explorer</h2>
+
+<p>
+Designed for individual travelers who love freedom,
+adventure, and discovering new places alone.
+</p>
+
+<div class="price">₹38,000</div>
+
+<ul class="features">
+<li>✔ 4 Days & 3 Nights</li>
+<li>✔ Budget Friendly Hotels</li>
+<li>✔ Adventure Activities</li>
+<li>✔ Local Sightseeing</li>
+<li>✔ Solo Travel Support</li>
+</ul>
+
+<a href="#" class="btn">Book Now ✈️</a>
+
+</div>
+
+</div>
+
+<!-- HONEYMOON PACKAGE -->
+
+<div class="package-card honeymoon">
+
+<div class="package-content">
+
+<h2>💑 Honeymoon Special</h2>
+
+<p>
+Romantic destinations with luxury resorts,
+candlelight dinners, and unforgettable experiences.
+</p>
+
+<div class="price">₹95,000</div>
+
+<ul class="features">
+<li>✔ Romantic Resort Stay</li>
+<li>✔ Candle Light Dinner</li>
+<li>✔ Couple Spa Session</li>
+<li>✔ Beachside Activities</li>
+<li>✔ Luxury Transportation</li>
+</ul>
+
+<a href="#" class="btn">Book Now ✈️</a>
+
+</div>
+
+</div>
+
+<!-- ADVENTURE PACKAGE -->
+
+<div class="package-card adventure">
+
+<div class="package-content">
+
+<h2>🏔 Adventure Tour</h2>
+
+<p>
+Thrilling adventures for travelers who love trekking,
+camping, mountain climbing, and exciting experiences.
+</p>
+
+<div class="price">₹55,000</div>
+
+<ul class="features">
+<li>✔ Trekking & Camping</li>
+<li>✔ Mountain Adventures</li>
+<li>✔ Bonfire Night</li>
+<li>✔ Professional Guides</li>
+<li>✔ Adventure Insurance</li>
+</ul>
+
+<a href="#" class="btn">Book Now ✈️</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <script>
 
-/* Button Click Effect */
-function showMessage(){
-    alert("✨ Start Your Dream Journey Today!");
-}
+/* Button Interaction */
 
-/* Row Animation */
-const rows = document.querySelectorAll("tbody tr");
+const buttons = document.querySelectorAll(".btn");
 
-rows.forEach((row,index)=>{
+buttons.forEach(btn => {
 
-    row.style.opacity="0";
-    row.style.transform="translateX(-30px)";
+    btn.addEventListener("click", function(e){
 
-    setTimeout(()=>{
+        e.preventDefault();
 
-        row.style.transition="0.5s ease";
-        row.style.opacity="1";
-        row.style.transform="translateX(0)";
+        alert("🎉 Your package booking request has started!");
 
-    }, index * 120);
+    });
 
 });
 
