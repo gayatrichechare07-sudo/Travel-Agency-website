@@ -1,76 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About TravelX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+GLOBAL STYLING
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+
+    /* Travel Background Image */
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+
+    color:white;
+    min-height:100vh;
+}
+
+/* =========================
+ABOUT SECTION
+========================= */
+
+.about-company{
+    width:100%;
+    padding:80px 8%;
+    text-align:center;
+}
+
+/* Heading */
+
+.about-company h2{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:#38bdf8;
+    animation:fadeDown 1s ease;
+}
+
+/* Intro Text */
+
+.about-text{
+    max-width:950px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.9;
+    color:#e2e8f0;
+    margin-bottom:60px;
+}
+
+/* =========================
+ABOUT CARDS GRID
+========================= */
+
+.about-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Individual Card */
+
+.about-card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:30px;
+    text-align:left;
+    transition:0.4s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+
+    animation:fadeUp 1s ease;
+}
+
+/* Hover Effect */
+
+.about-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    background:rgba(255,255,255,0.18);
+    box-shadow:0 10px 30px rgba(56,189,248,0.4);
+}
+
+/* Card Heading */
+
+.about-card h3{
+    font-size:1.5rem;
+    margin-bottom:15px;
+    color:#facc15;
+}
+
+/* Card Text */
+
+.about-card p{
+    font-size:15px;
+    line-height:1.8;
+    color:#f1f5f9;
+}
+
+/* =========================
+EXTRA DECORATION
+========================= */
+
+.about-company::before{
+    content:"✈️";
+    position:absolute;
+    top:40px;
+    left:40px;
+    font-size:80px;
+    opacity:0.15;
+}
+
+.about-company::after{
+    content:"🌍";
+    position:absolute;
+    bottom:30px;
+    right:40px;
+    font-size:90px;
+    opacity:0.15;
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:768px){
+
+    .about-company{
+        padding:60px 20px;
+    }
+
+    .about-company h2{
+        font-size:2.2rem;
+    }
+
+    .about-text{
+        font-size:16px;
+    }
+
+    .about-card{
+        padding:25px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
 
 <!-- =========================
-NEW ABOUT US SECTION
-ADD INSIDE about.html
+ABOUT US SECTION
 ========================= -->
 
 <section class="about-company">
 
-<h2>About TravelX Agency</h2>
+<h2>🌍 About TravelX Agency</h2>
 
 <p class="about-text">
 
-TravelX Agency is a newly started travel company created with the dream
-of making travel simple, affordable, and enjoyable for everyone.
-Our company was established in 2026 with a small but passionate team
-who love exploring new places and helping others experience the joy of travel.
+TravelX Agency is a modern startup travel company founded in 2026 with one simple dream —
+to make travel exciting, affordable, and stress-free for everyone.
+
+We believe that every journey should create unforgettable memories.
+Our passionate team works hard to help travelers explore beautiful destinations,
+experience different cultures, and enjoy comfortable travel services at affordable prices.
+
+Whether you're planning a family vacation, honeymoon, solo adventure,
+or international tour, TravelX is here to make your dream trip come true ✈️
 
 </p>
 
 <div class="about-box">
 
+<!-- CARD 1 -->
+
 <div class="about-card">
 
-<h3>🚀 Our Startup</h3>
+<h3>🚀 Our Startup Journey</h3>
 
 <p>
 
-TravelX began as a startup travel agency focused on providing
-budget-friendly and comfortable travel packages for families,
-friends, couples, and solo travelers.
+TravelX started as a small startup created by travel lovers who wanted
+to help people discover the beauty of the world without spending too much money.
 
-Even though we are a new company, we are dedicated to offering
-high-quality travel services and memorable experiences.
+From local tours to international vacations, our goal is to provide
+comfortable, budget-friendly, and memorable travel experiences for everyone.
 
 </p>
 
 </div>
 
+<!-- CARD 2 -->
+
 <div class="about-card">
 
-<h3>🌍 What We Offer</h3>
+<h3>🌴 What We Offer</h3>
 
 <p>
 
-We currently provide:
+✔ Domestic Tour Packages<br><br>
 
-<br><br>
+✔ International Tour Packages<br><br>
 
-✔ Domestic Tour Packages<br>
-✔ International Tour Packages<br>
-✔ Family Trips<br>
-✔ Honeymoon Packages<br>
-✔ Adventure Tours<br>
+✔ Honeymoon & Couple Trips<br><br>
+
+✔ Family Vacation Plans<br><br>
+
+✔ Adventure & Nature Tours<br><br>
+
 ✔ Online Booking Services
 
 </p>
 
 </div>
 
+<!-- CARD 3 -->
+
 <div class="about-card">
 
-<h3>📈 Our Growth</h3>
+<h3>📈 Our Growth Story</h3>
 
 <p>
 
-Since our launch, TravelX has started gaining trust from customers
-through affordable pricing, customer support, and exciting travel plans.
+Since launching in 2026, TravelX has slowly earned the trust of travelers
+through excellent customer support, affordable pricing, and exciting travel destinations.
 
-We are continuously improving our services and expanding our travel destinations.
+We are continuously growing and adding more travel packages every year.
 
 </p>
 
 </div>
+
+<!-- CARD 4 -->
 
 <div class="about-card">
 
@@ -78,38 +285,49 @@ We are continuously improving our services and expanding our travel destinations
 
 <p>
 
-Our mission is to help people explore beautiful destinations
-without stress by providing safe, affordable, and enjoyable travel experiences.
+Our mission is to make traveling easy, safe, and affordable for everyone.
+
+We want people to enjoy stress-free vacations and create beautiful memories
+with their friends, families, and loved ones.
 
 </p>
 
 </div>
 
+<!-- CARD 5 -->
+
 <div class="about-card">
 
-<h3>⭐ Why Choose Us?</h3>
+<h3>⭐ Why Choose TravelX?</h3>
 
 <p>
 
-• Affordable Packages<br>
-• Friendly Customer Support<br>
-• Safe and Comfortable Tours<br>
-• Easy Online Booking<br>
-• Exciting Travel Destinations
+• Affordable Tour Packages<br><br>
+
+• Friendly Customer Support<br><br>
+
+• Easy Online Booking System<br><br>
+
+• Safe & Comfortable Trips<br><br>
+
+• Exciting Destinations Worldwide
 
 </p>
 
 </div>
 
+<!-- CARD 6 -->
+
 <div class="about-card">
 
-<h3>🔮 Future Plans</h3>
+<h3>🔮 Our Future Vision</h3>
 
 <p>
 
-TravelX aims to grow into a trusted travel brand by introducing
-more destinations, luxury travel options, and smart online booking systems
-in the future.
+TravelX aims to become one of the most trusted travel brands in the future
+by introducing luxury tours, smart booking systems, and new global destinations.
+
+We dream of helping millions of people explore the world with happiness.
 
 </p>
 
@@ -118,3 +336,6 @@ in the future.
 </div>
 
 </section>
+
+</body>
+</html>
