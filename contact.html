@@ -1,5 +1,6 @@
 <!-- =========================
 UPDATED contact.html
+GLASSMORPHISM THEME
 ========================= -->
 
 <!DOCTYPE html>
@@ -12,14 +13,366 @@ UPDATED contact.html
 
 <title>Contact Us</title>
 
-<link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+    background:#0f172a;
+    color:white;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.55)),
+
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    animation:zoomBg 20s infinite alternate ease-in-out;
+
+    z-index:-2;
+}
+
+@keyframes zoomBg{
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.1);
+    }
+}
+
+/* Blur Effects */
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.5;
+    z-index:-1;
+}
+
+.blur1{
+    width:300px;
+    height:300px;
+    background:#38bdf8;
+    top:-80px;
+    left:-80px;
+}
+
+.blur2{
+    width:250px;
+    height:250px;
+    background:#9333ea;
+    bottom:-60px;
+    right:-60px;
+}
+
+/* Navbar */
+
+nav{
+    width:90%;
+    margin:20px auto;
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+}
+
+.logo{
+    font-size:1.7rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Contact Section */
+
+.contact-page{
+    width:90%;
+    max-width:1100px;
+
+    margin:40px auto;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.contact-page h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.contact-text{
+    text-align:center;
+    color:#dbeafe;
+    margin-bottom:35px;
+}
+
+/* Container */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+/* Contact Info */
+
+.contact-info{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.12);
+}
+
+.contact-info h3{
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin-bottom:18px;
+    font-size:1rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    line-height:1.6;
+}
+
+.contact-info i{
+    color:#38bdf8;
+    font-size:1.1rem;
+}
+
+/* Social Icons */
+
+.social-icons{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.12);
+
+    color:white;
+    font-size:1.1rem;
+
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+    background:linear-gradient(135deg,#06b6d4,#3b82f6);
+}
+
+/* Contact Form */
+
+.contact-form{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.12);
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:14px 16px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.1);
+
+    color:white;
+    font-size:1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#dbeafe;
+}
+
+/* Button */
+
+.contact-form button{
+    padding:14px;
+
+    border:none;
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#06b6d4,#3b82f6);
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(59,130,246,0.5);
+}
+
+/* Footer */
+
+footer{
+    width:90%;
+    margin:30px auto;
+
+    text-align:center;
+
+    padding:18px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.12);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .contact-page{
+        padding:25px;
+    }
+
+    .contact-page h2{
+        font-size:2rem;
+    }
+
+    nav{
+        padding:20px;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+}
+
+</style>
 
 </head>
 
 <body>
+
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
 
 <!-- Navbar -->
 
@@ -45,7 +398,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <section class="contact-page">
 
-<h2>Contact Us 📞</h2>
+<h2>📞 Contact Us</h2>
 
 <p class="contact-text">
 Feel free to contact us for travel bookings and tour information.
