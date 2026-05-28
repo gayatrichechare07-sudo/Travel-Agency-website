@@ -39,3 +39,4 @@ function calculatePrice(){
   document.getElementById("totalPrice").innerHTML =
   "Estimated Cost: ₹" + total;
 
+}
